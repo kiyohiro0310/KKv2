@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-size: 18px;
+  letter-spacing: 0.1rem;
+}
+
+.hamburger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  transition: all 0.5s;
+  z-index: 30;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background-color: #000;
+  transition: all 0.25s;
+}
+
+.hamburger-middle {
+  transform: translateY(10px);
+}
+
+.hamburger-bottom {
+  transform: translateY(20px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateX(-6px) translateY(6px);
+}
+
+/* For browsers that support :focus-visible */
+.splide__arrow:focus-visible {
+  outline: 3px solid black;
+}
+
+/* For other browsers */
+.splide.is-focus-in .splide_arrow:focus {
+  outline: 3px solid black;
+}
