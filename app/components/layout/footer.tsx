@@ -1,9 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import LinkText from "../fragments/link-text";
 import LinkSM from "../fragments/link-sm";
-import LinkButton from "../fragments/link-button";
 
 const links = ["Learning", "History", "Experience", "Life", "Policy", "Site Map"];
 
@@ -25,7 +23,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <LinkButton link="/contact" title="Contact" bg="bg-main" textColor="text-white" />
+          <Link href={'/contact'} title="Contact" className="px-6 py-2 bg-main rounded-md hover:bg-sub transition-all duration-200 font-bold text-white">
+              Contact
+          </Link>
         </div>
       </div>
 

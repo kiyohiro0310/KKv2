@@ -1,13 +1,33 @@
-import React, { useRef } from "react";
+"use client";
+import React, { FormEvent, useRef } from "react";
 import PageTitle from "../components/fragments/page-title";
 import SectionTitle from "../components/fragments/section-title";
 import InputField from "../components/fragments/input-field";
 import TextArea from "../components/fragments/text-area";
 import Link from "next/link";
-import Form from 'next/form'
-import { sendContact } from "./actions";
+import emailjs from '@emailjs/browser';
+import { redirect } from "next/navigation";
 
 const page = () => {
+
+  const form = useRef<any>();
+
+  const service_id = process.env.EMAILJS_SERVICE_ID!;
+  const template_id = process.env.EMAILJS_TEMPLATE_ID!;
+  const public_key = process.env.EMAILJS_PUBLIC_KEY!;
+
+  const submitHandler = (e: FormEvent) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      service_id,
+      template_id,
+      form.current,
+      public_key
+    )
+    .then((result) => {
+      redirect("/");
+    })
+  }
 
   return (
     <div className="max-w-4xl mx-auto pb-24">
@@ -19,9 +39,9 @@ const page = () => {
           subTitle="I'll support your business process from technology side."
         />
 
-        <Form className="px-6 py-32 flex flex-col space-y-10" action={sendContact}>
+        <form className="px-6 py-32 flex flex-col space-y-10" onSubmit={submitHandler} ref={form}>
           <div className="grid gird-cols-1 md:grid-cols-2 gap-10">
-            <InputField label="Fistname" type="text" mandatory={true} />
+            <InputField label="Firstname" type="text" mandatory={true} />
             <InputField label="Lastname" type="text" mandatory={true} />
           </div>
           <InputField label="Phone" type="phone" mandatory={true} />
@@ -51,7 +71,7 @@ const page = () => {
               Send
             </button>
           </div>
-        </Form>
+        </form>
       </div>
     </div>
   );

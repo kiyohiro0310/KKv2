@@ -8,7 +8,7 @@ const SkillSlider = () => {
       <Splide options={{}} aria-label="My Favorite Images">
         <SplideSlide>
           <JourneyPanel
-            title={"Life"}
+            title={"Daily"}
             description={"My dairy to share my daily findings and feelings."}
             image={"bg-life"}
             buttonText="Have a look!"

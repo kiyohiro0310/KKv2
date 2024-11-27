@@ -105,7 +105,7 @@ const page = () => {
         <div className="w-full md:w-2/3 flex flex-col mx-auto md:grid md:grid-cols-3 gap-8">
           {histories.map((history: any, index: number) => {
             return (
-              <Link href={`/history/${history.id}`} key={index} className="md:mx-auto flex flex-row jusitfy-center items-center space-x-4 md:space-x-0 md:flex-col " >
+              <Link href={`/learning/${history.id}`} key={index} className="md:mx-auto flex flex-row jusitfy-center items-center space-x-4 md:space-x-0 md:flex-col " >
                 <Image
                   src={history.image}
                   alt=""
@@ -122,8 +122,8 @@ const page = () => {
           {lists.map((item: any, index: number) => {
             return (
               <div key={index} className="mx-auto border-b-[0.5px] border-gray-500 py-2 hover:text-sub cursor-pointer transition-all duration-200">
-                <Link href={`/history/${item.category.toLowerCase()}`} >
-                  {item.category} {item.number}
+                <Link href={`/history?category=${item.category.toLowerCase()}`} >
+                  {item.category}
                 </Link>
               </div>
             );

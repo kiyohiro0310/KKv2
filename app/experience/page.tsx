@@ -75,7 +75,7 @@ const page = () => {
               className="text-sub hover:text-main"
               href={"https://s-k-group.com/"}
             >
-              https://s-k-group.com/
+              Website
             </Link>
 
             <div>
