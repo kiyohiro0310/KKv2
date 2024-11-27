@@ -1,5 +1,5 @@
 import { MongoClient, ObjectId } from "mongodb";
-import { recordType } from "../dev";
+import { categoryType } from "../dev";
 
 export async function connectToDatabase() {
     const client = await MongoClient.connect(process.env.MONGODB_URI!);
@@ -12,9 +12,9 @@ export const getAllRecordsByKind = async (client: MongoClient, kind: "learning" 
     return allMessages;
 }
 
-export const getAllRecordsByKindAndCategory = async (client: MongoClient, kind: "learning" | "daily") => {
+export const getAllRecordsByKindAndCategory = async (client: MongoClient, kind: "learning" | "daily", category: categoryType) => {
     const db = client.db();
-    const allMessages = db.collection("records").find({kind}).toArray();
+    const allMessages = db.collection("records").find({kind, category: [category]}).toArray();
     return allMessages;
 }
 

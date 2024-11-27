@@ -2,12 +2,12 @@ import React from "react";
 import PageTitle from "../components/fragments/page-title";
 import Image from "next/image";
 import Link from "next/link";
-import { connectToDatabase, getAllRecordsByKind } from "@/lib/db";
+import { connectToDatabase, getAllRecordsByKindAndCategory } from "@/lib/db";
 
 export default async function page() {
-
+  const category = (await params).category;
   const client = await connectToDatabase();
-  const records = await getAllRecordsByKind(client, "learning");
+  const records = await getAllRecordsByKindAndCategory(client, "learning", category);
 
 
   const lists = [

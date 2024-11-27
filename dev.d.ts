@@ -7,3 +7,5 @@ export type recordType = {
     kind: string;
     description: string;
 }
+
+export type categoryType = "Typescript" | "Python" | "PHP" | "Docker" | "AWS" | "Linux";
