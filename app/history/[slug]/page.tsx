@@ -1,15 +1,17 @@
 import React from "react";
-import PageTitle from "../components/fragments/page-title";
 import Image from "next/image";
 import Link from "next/link";
-import { connectToDatabase, getAllRecordsByKindAndCategory } from "@/lib/db";
+import { connectToDatabase, getAllRecordsByCategory } from "@/lib/db";
+import PageTitle from "@/app/components/fragments/page-title";
 
-export default async function page() {
-  const category = (await params).category;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug= (await params).slug as any;
   const client = await connectToDatabase();
-  const records = await getAllRecordsByKindAndCategory(client, "learning", category);
-
-
+  const records = await getAllRecordsByCategory(client, slug);
   const lists = [
     {
       category: "Typescript",
@@ -64,7 +66,7 @@ export default async function page() {
           {lists.map((item: any, index: number) => {
             return (
               <div key={index} className="mx-auto border-b-[0.5px] border-gray-500 py-2 hover:text-sub cursor-pointer transition-all duration-200">
-                <Link href={`/history?category=${item.category.toLowerCase()}`} >
+                <Link href={`/history/${item.category}`} >
                   {item.category}
                 </Link>
               </div>

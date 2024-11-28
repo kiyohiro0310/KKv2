@@ -64,7 +64,7 @@ export default async function page() {
           {lists.map((item: any, index: number) => {
             return (
               <div key={index} className="mx-auto border-b-[0.5px] border-gray-500 py-2 hover:text-sub cursor-pointer transition-all duration-200">
-                <Link href={`/history?category=${item.category.toLowerCase()}`} >
+                <Link href={`/history/${item.category}`} >
                   {item.category}
                 </Link>
               </div>
