@@ -42,7 +42,7 @@ const Header = () => {
             isOpen={isOpen}
             clickHandler={clickHandler}
           />
-          {isOpen && <MobileMenu links={links} />}
+          {isOpen && <MobileMenu links={links} onClick={clickHandler} />}
         </div>
     </div>
   );

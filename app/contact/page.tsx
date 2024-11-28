@@ -30,7 +30,7 @@ const page = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto pb-24">
+    <div className="w-[90%] md:max-w-4xl mx-auto pb-24">
       <PageTitle title="Contact" />
 
       <div className="py-16">
