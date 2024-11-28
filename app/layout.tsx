@@ -3,9 +3,8 @@ import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import { Suspense } from "react";
 import Loading from "./loading";
-import './globals.css';
-import '@splidejs/react-splide/css/sea-green';
-
+import "./globals.css";
+import "@splidejs/react-splide/css/sea-green";
 
 export const metadata: Metadata = {
   title: "Kiyohiro Kambayashi",
@@ -19,13 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <body>
           <Header />
           {children}
           <Footer />
-        </Suspense>
-      </body>
+        </body>
+      </Suspense>
     </html>
   );
 }
