@@ -20,7 +20,7 @@ export const getAllRecordsByKindAndCategory = async (client: MongoClient, kind: 
 
 export const getAllRecordsByCategory = async (client: MongoClient, category: string) => {
     const db = client.db();
-    const allMessages = db.collection("records").find({category: [category]}).toArray();
+    const allMessages = db.collection("records").find({category: {$all:[category]}}).toArray();
     return allMessages;
 }
 
