@@ -5,6 +5,12 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import "./globals.css";
 import "@splidejs/react-splide/css/sea-green";
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-myFont',
+})
 
 export const metadata: Metadata = {
   title: "Kiyohiro Kambayashi",
@@ -19,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Suspense fallback={<Loading />}>
-        <body>
+        <body className={`${inter.variable} font-sans`}>
           <Header />
           {children}
           <Footer />

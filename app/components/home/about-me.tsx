@@ -34,7 +34,7 @@ const AboutMe = () => {
           </p>
 
           <p>
-            Without haste but without rest. I spend most of time for learning
+            Without haste but without rest. I spend most of my free time for learning
             technology. I&apos;ll share what I&apos;ve learned and my journey with you all
             here.
           </p>

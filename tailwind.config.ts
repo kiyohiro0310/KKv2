@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-myFont)']
+      },
       colors: {
         main: "#88C057",
         sub: "#638B3F",
