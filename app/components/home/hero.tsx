@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="w-full h-[80vh] bg-hero bg-cover bg-center">
+    <div className="w-full h-screen bg-hero bg-cover bg-center">
       <div className="absolute bottom-48 md:right-16 lg:right-48 md:bottom-60 space-y-6 text-center md:text-left text-white">
         <div className="relative z-1">
             <h1 className="font-bold text-4xl md:text-5xl">Choice and Consequence</h1>
