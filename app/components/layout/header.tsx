@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div className="fixed w-screen bg-white z-50">
-      <div className="flex justify-center items-center space-x-32 p-6">
+      <div className="flex justify-center items-center space-x-32 p-2 md:p-6">
           <Link href={"/"}>
             <Image
               className="cursor-pointer hover:cursor-pointer"
