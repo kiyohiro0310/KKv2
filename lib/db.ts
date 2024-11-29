@@ -8,19 +8,19 @@ export async function connectToDatabase() {
 
 export const getAllRecordsByKind = async (client: MongoClient, kind: "learning" | "daily") => {
     const db = client.db();
-    const allMessages = db.collection("records").find({kind}).toArray();
+    const allMessages = db.collection("records").find({kind}).sort( {date : -1}).toArray();
     return allMessages;
 }
 
 export const getAllRecordsByKindAndCategory = async (client: MongoClient, kind: "learning" | "daily", category: categoryType) => {
     const db = client.db();
-    const allMessages = db.collection("records").find({kind, category: [category]}).toArray();
+    const allMessages = db.collection("records").find({kind, category: [category]}).sort( {date : -1}).toArray();
     return allMessages;
 }
 
 export const getAllRecordsByCategory = async (client: MongoClient, category: string) => {
     const db = client.db();
-    const allMessages = db.collection("records").find({category: {$all:[category]}}).toArray();
+    const allMessages = db.collection("records").find({category: {$all:[category]}}).sort( {date : -1}).toArray();
     return allMessages;
 }
 
@@ -33,6 +33,6 @@ export const getRecordById = async (client: MongoClient, id: string) => {
 
 export const getThreeLatestRecordsByKind = async (client: MongoClient, kind: "learning" | "daily") => {
     const db = client.db();
-    const allMessages = db.collection("records").find({kind}).limit(3).toArray();
+    const allMessages = db.collection("records").find({kind}).limit(3).sort( {date : -1}).toArray();
     return allMessages;
 }
