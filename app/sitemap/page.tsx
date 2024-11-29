@@ -6,7 +6,7 @@ const links = ["Learning", "History", "Experience", "Life", "Policy"];
 
 const page = () => {
   return (
-    <div className="max-w-4xl mx-auto pb-24">
+    <div className="w-[90vh] max-w-4xl mx-auto pb-24">
       <PageTitle title="Site Map" />
 
       <div className="md:w-full flex flex-col-reverse md:flex-row">
