@@ -30,3 +30,9 @@ export const getRecordById = async (client: MongoClient, id: string) => {
     const allMessages = db.collection("records").findOne({_id: nid});
     return allMessages;
 }
+
+export const getThreeLatestRecordsByKind = async (client: MongoClient, kind: "learning" | "daily") => {
+    const db = client.db();
+    const allMessages = db.collection("records").find({kind}).limit(3).toArray();
+    return allMessages;
+}
