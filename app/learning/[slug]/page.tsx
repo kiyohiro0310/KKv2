@@ -22,13 +22,17 @@ export default async function Page({
             <h1 className="text-2xl font-bold">{record.title}</h1>
             <p className="text-sm text-gray-500">
               Category:{" "}
-              {record.category.map((item: any, index: number) => (
-                <span key={index}>
-                  {item}
-                  {record.category.indexOf(item) !=
-                    record.category.length - 1 && ", "}{" "}
-                </span>
-              ))}{" "}
+              {Array.isArray(record.category) ? (
+                record.category.map((item: any, index: number) => (
+                  <span key={index}>
+                    {item}
+                    {record.category.indexOf(item) !=
+                      record.category.length - 1 && ", "}{" "}
+                  </span>
+                ))
+              ) : (
+                <span>{record.category}</span>
+              )}{" "}
               | {record.date}
             </p>
           </div>
