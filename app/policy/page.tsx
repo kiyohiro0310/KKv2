@@ -3,7 +3,7 @@ import PageTitle from "../components/fragments/page-title";
 
 const page = () => {
   return (
-    <div className="w-[90vh] md:max-w-4xl mx-auto pb-24">
+    <div className="w-[90%] md:max-w-4xl mx-auto pb-24">
       <PageTitle title="Policy" />
 
       <div id="data-handling">
