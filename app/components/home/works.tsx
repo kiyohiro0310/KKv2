@@ -10,8 +10,6 @@ import IndustryWorks from "../works/industry-works";
 const Works = () => {
     const [selectedValue, setSelectedValue] = useState('personal');
 
-    console.log(selectedValue);
-
   return (
     <div className="container mx-auto py-12">
       <SectionTitle
