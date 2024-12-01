@@ -10,3 +10,4 @@ export default async function LearningSideMenu () {
   )
 }
 
+export const dynamic = "force-dynamic";

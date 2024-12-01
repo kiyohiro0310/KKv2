@@ -44,3 +44,5 @@ export default async function pagd() {
     </div>
   );
 };
+
+export const dynamic = "force-dynamic";

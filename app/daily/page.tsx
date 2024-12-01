@@ -37,4 +37,4 @@ export default async function page() {
   );
 };
 
-
+export const dynamic = "force-dynamic";
