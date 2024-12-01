@@ -4,11 +4,21 @@ import Hero from "./components/home/hero";
 import MyJourney from "./components/home/journey";
 import Skill from "./components/home/skill";
 import Works from "./components/home/works";
+import { cache } from "react";
+
+export const fetchLearningData = cache(async () => {
+  const client = await connectToDatabase();
+  return getThreeLatestRecordsByKind(client, "learning");
+});
+
+export const fetchLifeData = cache(async () => {
+  const client = await connectToDatabase();
+  return getThreeLatestRecordsByKind(client, "daily");
+});
 
 export default async function Home() {
-  const client = await connectToDatabase();
-  const learningDataArr = await getThreeLatestRecordsByKind(client, "learning");
-  const lifeDataArr = await getThreeLatestRecordsByKind(client, "daily");
+  const learningDataArr = await fetchLearningData();
+  const lifeDataArr = await fetchLifeData();
 
   return (
     <div>
