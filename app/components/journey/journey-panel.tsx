@@ -15,7 +15,7 @@ const JourneyPanel = ({
 
   return (
     <div className={"w-fit mx-auto flex flex-col md:flex-row overflow-hidden"}>
-      <div className="space-y-6 md:space-y-12 md:text-left md:p-6">
+      <div className="space-y-6 md:space-y-12 md:text-left">
         <h1 className="font-bold text-2xl">{title}</h1>
         <p className="w-[60vw] md:w-72">{description}</p>
         <p className="pb-6">
