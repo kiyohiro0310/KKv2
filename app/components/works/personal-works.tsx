@@ -20,7 +20,7 @@ const PersonalWorks = () => {
           <p className="text-sm">My Personal website 1</p>
         </Link>
 
-        <Link href={"https://kiyo31.com"}>
+        <Link href={"https://portfolio2-ogsm34d70-kiyohiro0310s-projects.vercel.app/"}>
           <Image
             src={"/images/work2.png"}
             alt="work2 image"

@@ -23,7 +23,7 @@ const Works = () => {
           <WorkSelect isSelected={selectedValue == 'university' ? true : false} setValue={() => setSelectedValue("university")} text="University" />
           <WorkSelect isSelected={selectedValue == 'industry' ? true : false} setValue={() => setSelectedValue("industry")} text="Industry" />
         </div>
-        <div className="min-w-full md:h-[60vh] bg-skillC p-2 space-y-4">
+        <div className="min-w-full md:h-[80vh] bg-skillC p-2 space-y-4">
             {selectedValue == 'personal' && <PersonalWorks />}
             {selectedValue == 'university' && <UniversityWorks />}
             {selectedValue == 'industry' && <IndustryWorks />}
