@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import DailySideMenu from "../components/menu/daily-side-menu";
 import { connectToDatabase, getAllRecordsByKind } from "@/lib/db";
+import LearningSideMenu from "../components/menu/learning-side-menu";
 
 export default async function pagd() {
   const client = await connectToDatabase();
@@ -38,7 +39,7 @@ export default async function pagd() {
             );
           })}
         </div>
-        <DailySideMenu />
+        <LearningSideMenu />
       </div>
     </div>
   );

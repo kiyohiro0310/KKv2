@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LearningSideMenu from "../components/menu/learning-side-menu";
 import { connectToDatabase, getAllRecordsByKind } from "@/lib/db";
+import DailySideMenu from "../components/menu/daily-side-menu";
 
 export default async function page() {
   const client = await connectToDatabase();
@@ -30,7 +31,7 @@ export default async function page() {
             );
           })}
         </div>
-        <LearningSideMenu />
+        <DailySideMenu />
       </div>
     </div>
   );
