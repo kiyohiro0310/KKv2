@@ -21,7 +21,7 @@ export default async function page() {
             return (
               <Link href={`/daily/${item._id}`} key={index}>
                 <div className="flex justify-start items-center border-b-[0.5px] border-gray-300 py-4 space-x-4">
-                  <div className='w-1/6'><Image src={item.image} alt="learning image" className="mx-auto" width={70} height={70} /></div>
+                  <div className='w-1/6 h-16 flex justify-center items-center overflow-hidden'><Image src={item.image} alt="learning image" className="mx-auto" width={80} height={80} /></div>
                   <div className="w-3/4 flex flex-col overflow-hidden hover:text-sub transition-all duration-200">
                     <p className="text-sm">{item.date}</p>
                     <p>{item.title}</p>
