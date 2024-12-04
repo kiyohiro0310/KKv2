@@ -1,3 +1,4 @@
+import MarkdownPreview from "@/app/components/fragments/markdown-preview";
 import PageTitle from "@/app/components/fragments/page-title";
 import DailySideMenu from "@/app/components/menu/daily-side-menu";
 import LearningSideMenu from "@/app/components/menu/learning-side-menu";
@@ -27,7 +28,7 @@ export default async function Page({
             </p>
           </div>
 
-          <div dangerouslySetInnerHTML={{ __html: record.description }}></div>
+          <MarkdownPreview markdown={record.description} />
           <Link
             href={"/daily"}
             className="text-center border-gray-300 p-2 border-t border-b hover:bg-skillC"
