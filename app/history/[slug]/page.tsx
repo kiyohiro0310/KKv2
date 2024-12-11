@@ -25,13 +25,14 @@ export default async function Page({
             return (
               <Link href={`/learning/${history._id}`} key={index} className="md:mx-auto flex flex-row jusitfy-center items-center space-x-4 md:space-x-0 md:flex-col " >
                 <Image
-                  src={Array.isArray(history.category) ? `/images/language/${history.category[0]}.png` : `/images/language/${history.category}.png`}
+                  src={Array.isArray(history.category) ? `/images/language/${history.category[0].trim()}.png` : `/images/language/${history.category}.png`}
                   alt={history.category + " image"}
                   className="w-16 md:w-32"
                   width={150}
                   height={150}
                 />
                 <p className="text-center">
+
                   {Array.isArray(history.category) ? history.category.map((item: any, index: number) => (
                     <span key={index}>
                       {item}

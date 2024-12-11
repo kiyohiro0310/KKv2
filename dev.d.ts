@@ -8,4 +8,4 @@ export type recordType = {
     description: string;
 }
 
-export type categoryType = "Typescript" | "Python" | "PHP" | "Docker" | "AWS" | "Linux";
+export type categoryType = "Typescript" | "Python" | "PHP" | "Docker" | "AWS" | "Linux" | "Flutter";
