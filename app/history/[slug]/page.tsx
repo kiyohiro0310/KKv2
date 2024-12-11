@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { connectToDatabase, getAllRecordsByCategory } from "@/lib/db";
 import PageTitle from "@/app/components/fragments/page-title";
+import HistorySideMenu from "@/app/components/menu/history-side-menu";
 
 export default async function Page({
   params,
@@ -12,30 +13,11 @@ export default async function Page({
   const slug= (await params).slug as any;
   const client = await connectToDatabase();
   const records = await getAllRecordsByCategory(client, slug);
-  const lists = [
-    {
-      category: "Typescript",
-    },
-    {
-      category: "Python",
-    },
-    {
-      category: "PHP",
-    },
-    {
-      category: "Docker",
-    },
-    {
-      category: "AWS",
-    },
-    {
-      category: "Linux",
-    },
-  ];
 
   return (
     <div className="max-w-4xl mx-auto pb-24">
       <PageTitle title="History" />
+      {records.length == 0 && <p>There is no records</p> }
 
       <div className="px-12 md:w-full flex flex-col-reverse md:flex-row">
         <div className="w-full md:w-2/3 flex flex-col mx-auto md:grid md:grid-cols-3 gap-8">
@@ -66,18 +48,10 @@ export default async function Page({
             );
           })}
         </div>
-        <div className="w-full md:w-1/4 mx-auto pb-8 space-y-4 md:pb-0 md:space-y-0">
-          {lists.map((item: any, index: number) => {
-            return (
-              <div key={index} className="mx-auto border-b-[0.5px] border-gray-500 py-2 hover:text-sub cursor-pointer transition-all duration-200">
-                <Link href={`/history/${item.category}`} >
-                  {item.category}
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+        <HistorySideMenu />
       </div>
     </div>
   );
 };
+
+export const dynamic = "force-dynamic";

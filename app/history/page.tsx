@@ -3,31 +3,11 @@ import PageTitle from "../components/fragments/page-title";
 import Image from "next/image";
 import Link from "next/link";
 import { connectToDatabase, getAllRecordsByKind } from "@/lib/db";
+import HistorySideMenu from "../components/menu/history-side-menu";
 
 export default async function page() {
   const client = await connectToDatabase();
   const records = await getAllRecordsByKind(client, "learning");
-
-  const lists = [
-    {
-      category: "Typescript",
-    },
-    {
-      category: "Python",
-    },
-    {
-      category: "PHP",
-    },
-    {
-      category: "Docker",
-    },
-    {
-      category: "AWS",
-    },
-    {
-      category: "Linux",
-    },
-  ];
 
   return (
     <div className="max-w-4xl mx-auto pb-24">
@@ -66,18 +46,7 @@ export default async function page() {
             );
           })}
         </div>
-        <div className="w-full md:w-1/4 mx-auto pb-8 space-y-4 md:pb-0 md:space-y-0">
-          {lists.map((item: any, index: number) => {
-            return (
-              <div
-                key={index}
-                className="mx-auto border-b-[0.5px] border-gray-500 py-2 hover:text-sub cursor-pointer transition-all duration-200"
-              >
-                <Link href={`/history/${item.category}`}>{item.category}</Link>
-              </div>
-            );
-          })}
-        </div>
+        <HistorySideMenu />
       </div>
     </div>
   );
