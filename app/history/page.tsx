@@ -28,7 +28,6 @@ export default async function page() {
                   className="w-16 md:w-32"
                   width={150}
                   height={150}
-                  unoptimized
                 />
                 <p className="text-center">
                   {history.title}
