@@ -30,3 +30,5 @@ const SideMenu = ({list, isLearning}: {list: {}[]; isLearning: boolean;}) => {
 }
 
 export default SideMenu
+
+export const dynamic = "force-dynamic";

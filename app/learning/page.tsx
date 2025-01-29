@@ -1,9 +1,8 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PageTitle from "../components/fragments/page-title";
 import Link from "next/link";
 import Image from "next/image";
-import DailySideMenu from "../components/menu/daily-side-menu";
 import { connectToDatabase, getAllRecordsByKind } from "@/lib/db";
 import LearningSideMenu from "../components/menu/learning-side-menu";
 

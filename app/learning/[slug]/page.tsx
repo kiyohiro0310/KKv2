@@ -3,6 +3,7 @@ import PageTitle from "@/app/components/fragments/page-title";
 import LearningSideMenu from "@/app/components/menu/learning-side-menu";
 import { connectToDatabase, getRecordById } from "@/lib/db";
 import Link from "next/link";
+export const dynamic = "force-dynamic";
 
 export default async function Page({
   params,
@@ -53,4 +54,3 @@ export default async function Page({
   );
 }
 
-export const dynamic = "force-dynamic";

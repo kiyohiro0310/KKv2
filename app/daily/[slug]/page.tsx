@@ -1,7 +1,6 @@
 import MarkdownPreview from "@/app/components/fragments/markdown-preview";
 import PageTitle from "@/app/components/fragments/page-title";
 import DailySideMenu from "@/app/components/menu/daily-side-menu";
-import LearningSideMenu from "@/app/components/menu/learning-side-menu";
 import { connectToDatabase, getRecordById } from "@/lib/db";
 import Link from "next/link";
 
@@ -42,3 +41,5 @@ export default async function Page({
     </div>
   );
 }
+
+export const dynamic = "force-dynamic";
