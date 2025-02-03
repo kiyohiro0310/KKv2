@@ -4,13 +4,13 @@ import React from 'react'
 
 const SideMenu = ({list, isLearning}: {list: {}[]; isLearning: boolean;}) => {
   return (
-    <div className="hidden md:block w-1/2 md:w-1/4 mx-auto space-y-4 pb-8">
-          <Link href={'/learning'}>
+    <div className="md:block w-1/2 md:w-1/4 mx-auto space-y-4 pb-8">
+      {isLearning ? (<Link href={'/learning'}>
             <p className="border-b-[0.5px] border-gray-500 py-4 md:py-2 text-center hover:text-sub transition-all duration-200">Learning</p>
-          </Link>
-          <Link href={'/daily'}>
+          </Link>) : (<Link href={'/daily'}>
             <p className="border-b-[0.5px] border-gray-500 py-4 md:py-2 text-center hover:text-sub transition-all duration-200">Daily</p>
-          </Link>
+          </Link>)}
+
           {isLearning ? <p className='hidden md:block font-bold'>Latest learning</p> : <p className='hidden md:block font-bold'>Latest my daily</p> }
           {list.map((item: any, index: number) => {
             return (
