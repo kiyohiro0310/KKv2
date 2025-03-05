@@ -18,7 +18,7 @@ export default async function Page({
     <div className="max-w-4xl mx-auto pb-24">
       <PageTitle title="Learning" />
 
-      <div className="flex md:flex-row md:space-x-12">
+      <div className="flex flex-col-reverse md:flex-row md:space-x-12">
         <div className="w-3/4 mx-auto flex flex-col space-y-16">
           <div>
             <h1 className="text-2xl font-bold">{record.title}</h1>
