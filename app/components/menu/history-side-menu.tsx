@@ -1,33 +1,12 @@
+import { categories } from "@/lib/categories";
 import Link from "next/link";
 import React from "react";
 
 const HistorySideMenu = () => {
-  const lists = [
-    {
-      category: "Typescript",
-    },
-    {
-      category: "Python",
-    },
-    {
-      category: "PHP",
-    },
-    {
-      category: "Flutter",
-    },
-    {
-      category: "Docker",
-    },
-    {
-      category: "AWS",
-    },
-    {
-      category: "Linux",
-    },
-  ];
+  
   return (
     <div className="w-full md:w-1/4 mx-auto pb-8 space-y-4 md:pb-0 md:space-y-0">
-      {lists.map((item: any, index: number) => {
+      {categories.map((item: any, index: number) => {
         return (
           <div
             key={index}

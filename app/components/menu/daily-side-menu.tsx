@@ -9,5 +9,3 @@ export default async function DailySideMenu () {
     <SideMenu list={records} isLearning={true}/>
   )
 }
-
-export const dynamic = "force-dynamic";

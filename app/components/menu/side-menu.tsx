@@ -60,4 +60,3 @@ const SideMenu = ({
 
 export default SideMenu;
 
-export const dynamic = "force-dynamic";

@@ -7,7 +7,7 @@ import LinkText from "../fragments/link-text";
 import Hamburger from "../fragments/hamburger";
 import MobileMenu from "../menu/mobile-menu";
 
-const links = ["Learning", "History", "Experience", "Life", "Contact"];
+const links = ["Diary", "Experience", "Life", "Contact"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +21,8 @@ const Header = () => {
   }
 
   return (
-    <div className="fixed w-screen bg-white z-50">
-      <div className="flex justify-center items-center space-x-32 p-2 md:p-6">
+    <div className="fixed w-screen bg-white z-50 font-bold">
+      <div className="flex justify-around items-center p-2 md:p-6">
           <Link href={"/"}>
             <Image
               className="cursor-pointer hover:cursor-pointer"

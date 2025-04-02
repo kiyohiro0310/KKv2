@@ -3,7 +3,7 @@ import React from "react";
 import LinkText from "../fragments/link-text";
 import LinkSM from "../fragments/link-sm";
 
-const links = ["Learning", "History", "Experience", "Life", "Policy", "Site Map"];
+const links = ["Diary", "Experience", "Life", "Policy", "Site Map"];
 
 const Footer = () => {
   return (
