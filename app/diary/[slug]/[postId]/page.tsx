@@ -20,8 +20,8 @@ export default async function page({
 
   return (
     <DiaryLayout>
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold">{post.title}</h1>
+      <div className="space-y-4 overflow-hidden py-4">
+        <h1 className="text-xl md:text-4xl font-bold">{post.title}</h1>
         <div className="w-16 h-[3px] bg-main mt-6"></div>
         <div>
           <p className="text-gray-500 text-sm">
@@ -44,7 +44,7 @@ export default async function page({
           height={190}
           priority
         />
-        <article dangerouslySetInnerHTML={{ __html: content }}></article>
+        <article className="text-[14.5px] md:text-lg" dangerouslySetInnerHTML={{ __html: content }}></article>
       </div>
     </DiaryLayout>
   );
