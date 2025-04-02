@@ -17,13 +17,13 @@ const Works = () => {
         subTitle="These are what I have done so far."
       />
 
-      <div className="max-w-6xl mx-auto flex flex-col justify-center items-center py-12 md:py-20">
+      <div className="max-w-6xl h-fit mx-auto flex flex-col justify-center items-center">
         <div className="w-full mx-auto flex flex-col md:flex-row font-bold">
           <WorkSelect isSelected={selectedValue == 'personal' ? true : false} setValue={() => setSelectedValue("personal")} text="Personal" />
           <WorkSelect isSelected={selectedValue == 'university' ? true : false} setValue={() => setSelectedValue("university")} text="University" />
           <WorkSelect isSelected={selectedValue == 'industry' ? true : false} setValue={() => setSelectedValue("industry")} text="Industry" />
         </div>
-        <div className="min-w-full md:h-[80vh] bg-skillC p-2 space-y-4">
+        <div className="min-w-full bg-skillC p-2">
             {selectedValue == 'personal' && <PersonalWorks />}
             {selectedValue == 'university' && <UniversityWorks />}
             {selectedValue == 'industry' && <IndustryWorks />}

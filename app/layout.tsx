@@ -5,11 +5,12 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import "./globals.css";
 import "@splidejs/react-splide/css/sea-green";
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const inter = Inter({
+const font = Poppins({
+  weight: ['400', '700'],
+  style: ['normal', 'normal'],
   subsets: ['latin'],
-  variable: '--font-myFont',
 })
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Suspense fallback={<Loading />}>
-        <body className={`${inter.variable} font-sans overflow-x-hidden`}>
+        <body className={`${font.className} overflow-x-hidden`}>
           <Header />
           {children}
           <Footer />
