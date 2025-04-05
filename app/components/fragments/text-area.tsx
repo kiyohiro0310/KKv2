@@ -8,7 +8,7 @@ const TextArea = ({ label, mandatory, rows, cols}: { label: string; mandatory: b
       <textarea
         name={labelInput}
         id={labelInput}
-        className="border-gray-300 p-1 border-solid border-2 focus:outline-none"
+        className="border-gray-300 p-1 border-solid border-2 focus:outline-none text-dark"
         rows={rows}
         cols={cols}
         required={mandatory ? true : false}

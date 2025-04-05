@@ -9,7 +9,7 @@ const InputField = ({ label, type, mandatory }: { label: string; type: string; m
         type={type}
         name={labelInput}
         id={labelInput}
-        className="border-gray-300 p-1 border-solid border-b-2 h-10 focus:outline-none"
+        className="border-gray-300 p-1 border-solid border-b-2 h-10 focus:outline-none text-dark"
         required={mandatory ? true : false}
       />
     </div>
