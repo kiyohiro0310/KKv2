@@ -40,7 +40,7 @@ export default async function page({
           src={post.image}
           alt="image"
           className="w-full h-72 object-cover rounded-lg"
-          width={800}
+          width={700}
           height={190}
           priority
         />

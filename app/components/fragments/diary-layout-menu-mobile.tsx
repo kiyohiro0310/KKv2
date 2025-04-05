@@ -14,7 +14,7 @@ const DiaryLayoutMenu = ({ items }: { items: any }) => {
   };
 
   return (
-    <div className="sm:w-1/3 bg-white dark:bg-dark dark:text-light w-full md:w-1/4">
+    <div className="bg-white dark:bg-dark dark:text-light md:w-1/4">
       {/* Mobile Menu Button */}
 
       {!isMobileMenuOpen && (
