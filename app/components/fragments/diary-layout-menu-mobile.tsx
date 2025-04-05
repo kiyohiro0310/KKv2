@@ -14,7 +14,7 @@ const DiaryLayoutMenu = ({ items }: { items: any }) => {
   };
 
   return (
-    <>
+    <div className="sm:w-1/3 bg-white dark:bg-dark dark:text-light w-full md:w-1/4">
       {/* Mobile Menu Button */}
 
       {!isMobileMenuOpen && (
@@ -40,13 +40,13 @@ const DiaryLayoutMenu = ({ items }: { items: any }) => {
       )}
       {/* Sidebar Menu */}
       <div
-        className={`fixed top-16 left-0 h-full w-64 bg-white transform transition-transform duration-300 py-12 px-4 z-40 ${
+        className={`bg-white dark:bg-dark dark:text-light fixed top-16 left-0 h-full transform transition-transform duration-300 py-12 px-4 z-40 ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } md:static md:translate-x-0 md:w-1/4`}
+        } md:static md:translate-x-0`}
       >
         <div id="category" className="w-full">
           <button
-            className="md:hidden absolute top-8 right-0 z-50  text-black px-4 rounded-sm"
+            className="md:hidden absolute top-8 right-0 z-50 text-dark dark:text-light px-4 rounded-sm"
             onClick={toggleMobileMenu}
           >
             <svg
@@ -83,7 +83,7 @@ const DiaryLayoutMenu = ({ items }: { items: any }) => {
           <div className="p-3 flex flex-col items-start justify-center">
             {dateCounts.map((item: any, index: number) => (
               <div className="flex w-full items-center space-x-4" key={index}>
-                <span className="flex h-8 w-8 items-center justify-center rounded-md border-[0.5px] border-gray-400">
+                <span className="flex p-4 h-8 w-8 items-center justify-center rounded-md border-[0.5px] border-gray-400">
                   {item.count}
                 </span>
                 <Link
@@ -111,7 +111,7 @@ const DiaryLayoutMenu = ({ items }: { items: any }) => {
           onClick={toggleMobileMenu}
         ></div>
       )}
-    </>
+    </div>
   );
 };
 

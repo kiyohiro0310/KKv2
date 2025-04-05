@@ -3,9 +3,9 @@ import PageTitle from "../components/fragments/page-title";
 
 const page = () => {
   return (
-    <div>
+    <div className="dark:bg-dark dark:text-light">
       <div className="w-full h-[80vh] bg-life-hero bg-cover bg-center">
-        <div className="absolute bottom-56 md:right-16 lg:right-48 md:bottom-72 space-y-6 text-center">
+        <div className="absolute bottom-56 md:right-16 lg:right-32 md:bottom-56 space-y-6 text-center text-dark">
           <h1 className="font-bold text-4xl md:text-5xl">
             Life is a journey, not a destination
           </h1>

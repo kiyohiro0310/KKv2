@@ -16,7 +16,6 @@ export default async function page({ searchParams }: { searchParams: Promise<{ p
       <div className="pb-12">
         <h1 className="text-4xl font-bold">Diary</h1>
         <p>Sharing experinece and new findings.</p>
-        
       </div>
 
       <DiaryList posts={posts} pagination={pagination} page={page} />

@@ -13,9 +13,11 @@ const DiaryLayout = async (props: React.PropsWithChildren) => {
   }));
 
   return (
-    <div className="container mx-auto px-4 py-8 flex pt-36">
-      <DiaryLayoutMenuMobile items={serializedItems} />
-      <div className="w-full md:w-3/4">{props.children}</div>
+    <div className="w-screen dark:bg-dark dark:text-light">
+      <div className="container mx-auto px-4 py-8 flex pt-36">
+        <DiaryLayoutMenuMobile items={serializedItems} />
+        <div className="w-full sm:w-3/4">{props.children}</div>
+      </div>
     </div>
   );
 };

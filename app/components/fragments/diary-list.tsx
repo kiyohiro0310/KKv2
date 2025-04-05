@@ -7,7 +7,7 @@ const DiaryList = async ({ posts, pagination, page, params}: { posts: any; pagin
   return (
     <div className="space-y-4">
       {posts.map((post: recordType | any, index: number) => (
-        <div key={index} className="flex flex-col md:flex-row items-center bg-white p-4 rounded-lg shadow-md">
+        <div key={index} className="flex flex-col md:flex-row items-center dark:bg-dark p-4 rounded-lg shadow-md">
           <div className="w-full md:w-1/3">
             <Image
               src={post.image}
@@ -21,13 +21,13 @@ const DiaryList = async ({ posts, pagination, page, params}: { posts: any; pagin
 
           <div className="w-full md:w-2/3 flex flex-col space-y-3 px-4">
             <Link className="text-xl font-bold hover:text-sub transition-all duration-200" href={`/diary/${params ? params : post.category ? Array.isArray(post.category) ? post.category[0].toLowerCase() : post.category.toLowerCase() : "daily"}/${post._id}`}>{post.title}</Link>
-            <p className="text-sm text-gray-600">{new Date(post.date).toLocaleDateString("en-US", {
+            <p className="text-sm text-gray-600 dark:text-gray-400">{new Date(post.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}</p>
             <article
-              className="w-full h-32 text-gray-500 text-[14.5px] overflow-hidden"
+              className="w-full h-32 text-gray-500 dark:text-gray-200 text-[14.5px] overflow-hidden"
               dangerouslySetInnerHTML={{ __html: post.description }}
             ></article>
             <div className="text-sm pt-2 space-x-2">

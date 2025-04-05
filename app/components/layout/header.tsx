@@ -29,8 +29,8 @@ const Header = () => {
               className="cursor-pointer hover:cursor-pointer"
               src={"/images/kiyo-logo.png"}
               alt={"logo"}
-              width={155}
-              height={65}
+              width={60}
+              height={60}
             />
           </Link>
           <div className="hidden md:flex justify-center items-center space-x-12">

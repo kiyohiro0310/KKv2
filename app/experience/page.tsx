@@ -7,6 +7,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
+    <div className="w-screen dark:bg-dark dark:text-light">
     <div className="max-w-4xl mx-auto pb-24">
       <PageTitle title="Experience" />
 
@@ -111,6 +112,7 @@ const page = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
