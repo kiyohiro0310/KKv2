@@ -22,7 +22,7 @@ const JourneyPanel = ({
           <LinkButton
             link={title.toLowerCase()}
             title={buttonText}
-            bg="bg-black"
+            bg="bg-main"
             textColor="text-white"
           />
         </p>

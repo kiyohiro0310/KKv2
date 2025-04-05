@@ -11,7 +11,7 @@ const AboutMe = () => {
     Hotjar.init(siteId, hotjarVersion);
   }, []);
   return (
-    <div className="max-w-6xl mx-auto py-12">
+    <div className="max-w-6xl mx-auto py-12 ">
       <SectionTitle
         title="About Me"
         subTitle="This section describes about me. Please have a read!"

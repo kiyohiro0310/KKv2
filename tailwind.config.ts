@@ -6,6 +6,7 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -14,6 +15,9 @@ export default {
       colors: {
         main: "#88C057",
         sub: "#638B3F",
+        dark: "#2C2929",
+        lightDark: "#3C3C3C",
+        light: "#F5F5F5",
         skillC: "#EFEFEF",
         footer: "#2C2929"
       },

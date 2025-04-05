@@ -5,7 +5,7 @@ const LinkButton = ({ link, bg, title, textColor }: { link: string; bg: string; 
   return (
     <Link
       className={`px-6 py-2 ${bg} rounded-md hover:bg-sub transition-all duration-200 font-bold ${textColor}`}
-      href={link == "learning" ? "/learning" : "/daily"}
+      href="/diary"
     >
       {title}
     </Link>

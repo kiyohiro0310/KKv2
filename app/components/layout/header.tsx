@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import LinkText from "../fragments/link-text";
 import Hamburger from "../fragments/hamburger";
 import MobileMenu from "../menu/mobile-menu";
+import ThemeSwitch from "@/app/Themes/ThemeSwitcher";
 
 const links = ["Diary", "Experience", "Life", "Contact"];
 
@@ -21,7 +22,7 @@ const Header = () => {
   }
 
   return (
-    <div className="fixed w-screen bg-white z-50 font-bold">
+    <div className="fixed w-screen bg-white dark:bg-dark dark:text-light z-50 font-bold">
       <div className="flex justify-around items-center p-2 md:p-6">
           <Link href={"/"}>
             <Image
@@ -36,12 +37,14 @@ const Header = () => {
             {links.map((link: string, index: number) => (
               <LinkText key={index} title={link} />
             ))}
+            <ThemeSwitch />
           </div>
           <Hamburger
             openStatus={openStatus}
             isOpen={isOpen}
             clickHandler={clickHandler}
           />
+          
           {isOpen && <MobileMenu links={links} onClick={clickHandler} />}
         </div>
     </div>

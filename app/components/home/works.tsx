@@ -18,12 +18,12 @@ const Works = () => {
       />
 
       <div className="max-w-6xl h-fit mx-auto flex flex-col justify-center items-center">
-        <div className="w-full mx-auto flex flex-col md:flex-row font-bold">
+        <div className="w-full mx-auto flex flex-col md:flex-row font-bold bg-skillC dark:bg-lightDark">
           <WorkSelect isSelected={selectedValue == 'personal' ? true : false} setValue={() => setSelectedValue("personal")} text="Personal" />
           <WorkSelect isSelected={selectedValue == 'university' ? true : false} setValue={() => setSelectedValue("university")} text="University" />
           <WorkSelect isSelected={selectedValue == 'industry' ? true : false} setValue={() => setSelectedValue("industry")} text="Industry" />
         </div>
-        <div className="min-w-full bg-skillC p-2">
+        <div className="min-w-full bg-skillC dark:bg-lightDark p-2">
             {selectedValue == 'personal' && <PersonalWorks />}
             {selectedValue == 'university' && <UniversityWorks />}
             {selectedValue == 'industry' && <IndustryWorks />}
