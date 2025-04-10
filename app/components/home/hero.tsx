@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden md:absolute -right-[5vw] -bottom-[13vw] rounded-[30%] w-[30vw] h-[30vw] bg-sub rotate-45"></div>
+      <div className="md:hidden absolute -right-[5vw] -bottom-[13vw] rounded-[30%] w-[30vw] h-[30vw] bg-sub rotate-45"></div>
     </div>
   );
 };
