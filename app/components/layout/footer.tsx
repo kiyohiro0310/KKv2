@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-xs text-center">2024 Kiyohiro Kambayashi</p>
+      <p className="text-xs text-center">2025 Kiyohiro Kambayashi</p>
     </div>
   );
 };
