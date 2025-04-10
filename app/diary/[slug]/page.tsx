@@ -12,32 +12,27 @@ export default async function page({
   const { slug } = await params;
   const page = parseInt((await searchParams).page || "1", 10);
   const client = await connectToDatabase();
-  let allPosts;
-  let filteredPosts;
-  if (slug.startsWith("2")) {
-    const [year, month] = slug.split("_");
-    allPosts = await getAllRecordsByDate(client, Number(year), Number(month));
-    filteredPosts = await getPaginatedRecordsByDate(client, Number(year), Number(month), page);
-  }
-  else {
-
-  allPosts = await getAllRecordsByCategory(
-    client,
-    slug == "aws" || slug == "php"
-      ? slug.toUpperCase()
-      : slug.charAt(0).toUpperCase() + slug.slice(1),
-  );
-
-  filteredPosts = await getPaginatedRecordsByCategory(
-    client,
-    slug == "aws" || slug == "php"
-      ? slug.toUpperCase()
-      : slug.charAt(0).toUpperCase() + slug.slice(1),
-    page
-  );
-
-}
+  const [allPosts, filteredPosts] = await Promise.all([
+    slug.startsWith("2")
+      ? getAllRecordsByDate(client, Number(slug.split("_")[0]), Number(slug.split("_")[1]))
+      : getAllRecordsByCategory(
+          client,
+          slug == "aws" || slug == "php"
+            ? slug.toUpperCase()
+            : slug.charAt(0).toUpperCase() + slug.slice(1),
+        ),
+    slug.startsWith("2")
+      ? getPaginatedRecordsByDate(client, Number(slug.split("_")[0]), Number(slug.split("_")[1]), page)
+      : getPaginatedRecordsByCategory(
+          client,
+          slug == "aws" || slug == "php"
+            ? slug.toUpperCase()
+            : slug.charAt(0).toUpperCase() + slug.slice(1),
+          page,
+        ),
+  ]);
   client.close();
+  
 
   return (
     <DiaryLayout>

@@ -16,7 +16,7 @@ export default async function page({
     return <div className="text-center text-2xl font-bold">Post not found</div>;
   }
 
-  const content = await marked.parse(post.description);
+  const content = marked.parse(post.description);
 
   return (
     <DiaryLayout>
@@ -42,7 +42,7 @@ export default async function page({
           className="w-full h-72 object-cover rounded-lg"
           width={700}
           height={190}
-          priority
+          loading="lazy"
         />
         <article className="text-[14.5px] md:text-lg" dangerouslySetInnerHTML={{ __html: content }}></article>
       </div>
