@@ -21,11 +21,12 @@ const Hero = () => {
       </div>
 
       <div className="relative md:w-1/2 flex justify-center mt-8 md:mt-0">
-        <div className="relative w-[40vw] h-[40vw] rounded-full overflow-hidden shadow-lg transform bg-hero bg-cover bg-center">
+        <div className="relative w-[40vw] h-[40vw] sm:w-[35vw] sm:h-[35vw] rounded-full overflow-hidden shadow-lg transform bg-hero bg-cover bg-center">
         </div>
       </div>
 
-      <div className="md:hidden absolute -right-[5vw] -bottom-[13vw] rounded-[30%] w-[30vw] h-[30vw] bg-sub rotate-45"></div>
+      <div className="hidden sm:block absolute -right-[5vw] -bottom-[13vw] rounded-[30%] w-[30vw] h-[30vw] bg-sub rotate-45"></div>
+      <div className="sm:hidden block absolute -right-[5vw] -bottom-[13vw] rounded-[30%] w-[200px] h-[200px] bg-sub rotate-45"></div>
     </div>
   );
 };
