@@ -17,7 +17,7 @@ const Works = () => {
         subTitle="These are what I have done so far."
       />
 
-      <div className="max-w-6xl h-fit mx-auto flex flex-col justify-center items-center">
+      <div className="max-w-6xl h-fit mx-auto flex flex-col justify-center items-center py-6">
         <div className="w-full mx-auto flex flex-col md:flex-row font-bold bg-skillC dark:bg-lightDark">
           <WorkSelect isSelected={selectedValue == 'personal' ? true : false} setValue={() => setSelectedValue("personal")} text="Personal" />
           <WorkSelect isSelected={selectedValue == 'university' ? true : false} setValue={() => setSelectedValue("university")} text="University" />
