@@ -31,8 +31,6 @@ export default async function page({
           page,
         ),
   ]);
-  client.close();
-  
 
   return (
     <DiaryLayout>

@@ -13,7 +13,7 @@
     "@hotjar/browser": "^1.0.9",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
-    "gsap": "^3.12.5",
+    "gsap": "^3.13.0",
     "marked": "^15.0.7",
     "mongodb": "^6.11.0",
     "net": "^1.0.2",

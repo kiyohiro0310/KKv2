@@ -1,7 +1,9 @@
+'use client';
+
 import React from "react";
 import PageTitle from "../components/fragments/page-title";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="dark:bg-dark dark:text-light">
       <div className="w-full h-[80vh] bg-life-hero bg-cover bg-center">
@@ -14,7 +16,9 @@ const page = () => {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <PageTitle title="Life" />
+        <div>
+          <PageTitle title="Life" />
+        </div>
         <div className="flex flex-col space-y-12 pb-32 md:py-32 md:pb-64">
           <div className="text-center">
             <h1 className="text-2xl md:text-3xl font-bold">Progress, not perfection</h1>
@@ -51,7 +55,7 @@ const page = () => {
           </div>
 
           <div className="flex flex-col md:flex-row w-full gap-4 p-4">
-          <p className="w-full md:w-3/5">
+            <p className="w-full md:w-3/5">
               Every mistake holds a lesson, guiding us toward wisdom and
               resilience. Rather than dwelling on errors, see each as a stepping
               stone to growth and understanding.
@@ -67,4 +71,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

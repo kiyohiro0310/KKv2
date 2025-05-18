@@ -26,7 +26,7 @@ const Loading = () => {
   }, []);
 
   return (
-    <section className="h-screen w-screen flex justify-center items-center pt-24 md:pt-0">
+    <section className="h-screen w-screen flex justify-center items-center pt-24 md:pt-0 dark:bg-dark dark:text-light">
       <div>
         <Image className="leaf" src="/images/leaf.png" alt="leaf" width={33} height={33} />
       </div>

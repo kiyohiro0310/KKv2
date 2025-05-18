@@ -1,6 +1,6 @@
-import { recordType } from "@/dev";
+import { RecordType } from "@/dev";
 
-export function datefunc(posts: recordType[]) {
+export function datefunc(posts: RecordType[]) {
     let allDates: string[] = [];
     let uniqueDates: Date[] = [];
   

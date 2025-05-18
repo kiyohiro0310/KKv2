@@ -1,5 +1,5 @@
 
-export type recordType = {
+export type RecordType = {
     title: string;
     category: string | undefined;
     image: string;
