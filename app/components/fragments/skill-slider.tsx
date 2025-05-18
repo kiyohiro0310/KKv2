@@ -4,7 +4,7 @@ import JourneyPanel from "../journey/journey-panel";
 
 const SkillSlider = () => {
   return (
-    <div className="lg:w-[90vh] mx-auto">
+    <div>
       <Splide options={{}} aria-label="My Favorite Images">
         <SplideSlide>
           <JourneyPanel
