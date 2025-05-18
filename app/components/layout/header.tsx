@@ -27,7 +27,7 @@ const Header = () => {
           <Link href={"/"}>
             <Image
               className="cursor-pointer hover:cursor-pointer"
-              src={"/images/kiyo-logo.png"}
+              src={"/favicon.ico"}
               alt={"logo"}
               width={60}
               height={60}
