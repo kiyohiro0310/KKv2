@@ -16,6 +16,8 @@ const DiaryList = ({ posts, pagination, page, params}: { posts: any; pagination:
     router.push(path);
   };
 
+  if (posts.length == 0 && params) return <div>No record found by <b className="text-sub">{params.toUpperCase()}</b>.</div>
+
   return (
     <div className="space-y-4">
       {isLoading && (

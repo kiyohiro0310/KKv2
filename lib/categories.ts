@@ -12,15 +12,22 @@ export const categories = [
       category: "Flutter",
     },
     {
+      category: "GO",
+    },
+    {
       category: "Docker",
     },
     {
       category: "AWS",
     },
     {
+      category: "DevOps",
+    },
+    {
       category: "Linux",
     },
     {
       category: "Network"
-    }
+    },
+    
   ];
