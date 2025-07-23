@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import SkillCard from "../fragments/skill-card";
 import SectionTitle from "../fragments/section-title";
 import { fadeInUp, staggerFadeInUp, createScrollTrigger } from "@/app/lib/animations";
+import Flashcard from "../fragments/flashcard";
 
 const Skill = () => {
   const titleRef = useRef<HTMLDivElement>(null);

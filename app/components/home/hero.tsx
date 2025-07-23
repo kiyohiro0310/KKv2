@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { fadeInUp, slideInRight, createScrollTrigger } from "@/app/lib/animations";
+import Image from "next/image";
 
 const Hero = () => {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -39,6 +40,9 @@ const Hero = () => {
         </p>
         <Link href={"/contact"} className="px-8 py-3 bg-primary hover:bg-primary-dark font-medium text-lg rounded-lg shadow-lg transition-all duration-300 hover:text-main">
           Contact
+        </Link>
+        <Link href={'https://aws.amazon.com/certification/certified-cloud-practitioner/'} className="pt-12 flex justify-start align-start">
+          <Image src="/images/clf.png" alt="clf logo" width={50} height={50} />
         </Link>
       </div>
 
