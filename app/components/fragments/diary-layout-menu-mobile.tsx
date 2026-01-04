@@ -14,7 +14,7 @@ const DiaryLayoutMenu = ({ items }: { items: any }) => {
   };
 
   return (
-    <div className="bg-white dark:bg-dark dark:text-light md:w-1/4">
+    <div className="bg-light dark:bg-dark dark:text-light md:w-1/4">
       {/* Mobile Menu Button */}
 
       {!isMobileMenuOpen && (
@@ -40,7 +40,7 @@ const DiaryLayoutMenu = ({ items }: { items: any }) => {
       )}
       {/* Sidebar Menu */}
       <div
-        className={`bg-white dark:bg-dark dark:text-light fixed top-16 left-0 h-full transform transition-transform duration-300 py-12 px-4 z-40 ${
+        className={`bg-light dark:bg-dark dark:text-light fixed top-16 left-0 h-full transform transition-transform duration-300 py-12 px-4 z-40 ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         } md:static md:translate-x-0`}
       >

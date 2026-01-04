@@ -11,7 +11,7 @@ export default async function Home() {
   const lifeDataArr = await getThreeLatestRecordsByKind(client, "daily");
 
   return (
-    <div className="bg-white dark:bg-dark dark:text-light overflow-hidden">
+    <div className="bg-light dark:bg-dark dark:text-light overflow-hidden">
       <Hero />
       <Skill />
       <MyJourney learningData={JSON.stringify(learningDataArr)} lifeData={JSON.stringify(lifeDataArr)} />

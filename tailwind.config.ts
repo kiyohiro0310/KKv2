@@ -13,11 +13,11 @@ export default {
         sans: ['var(--font-myFont)']
       },
       colors: {
-        main: "#88C057",
-        sub: "#638B3F",
+        main: "#41644A",
+        sub: "#0D4715",
         dark: "#2C2929",
         lightDark: "#3C3C3C",
-        light: "#F5F5F5",
+        light: "#ECE5DA",
         skillC: "#EFEFEF",
         footer: "#2C2929"
       },

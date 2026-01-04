@@ -59,7 +59,7 @@ export default async function Page({ searchParams }: PageProps) {
     console.error("Error loading diary page:", error);
     return (
       <DiaryLayout>
-        <div className="pb-12 animate-fade-in">
+        <div className="pb-12 bg-light animate-fade-in">
           <h1 className="text-4xl font-bold animate-slide-down">Diary</h1>
           <p className="text-red-500 animate-slide-up">Sorry, there was an error loading the diary entries. Please try again later.</p>
         </div>

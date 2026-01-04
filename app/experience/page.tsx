@@ -11,7 +11,7 @@ const Page = () => {
 
 
   return (
-    <div className="w-screen dark:bg-dark dark:text-light">
+    <div className="w-screen bg-light dark:bg-dark dark:text-light">
       <div className="max-w-4xl mx-auto pb-24">
         <div>
           <PageTitle title="Experience" />
