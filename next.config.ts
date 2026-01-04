@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   /* config options here */
   env: {
     EMAILJS_SERVICE_ID: "service_1rakc4l",
