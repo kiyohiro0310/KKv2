@@ -31,7 +31,7 @@ const page = () => {
 
         <div className="py-16">
           <SectionTitle
-            title="If you need a support, pleas don't hesitate to ask!"
+            title="If you need a support, please don't hesitate to ask!"
             subTitle="I'll support your business process from technology side."
           />
 
