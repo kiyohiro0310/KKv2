@@ -25,7 +25,7 @@ const page = () => {
   };
 
   return (
-    <div className="w-screen dark:bg-dark dark:text-light">
+    <div className="w-screen bg-light dark:bg-dark dark:text-light">
       <div className="w-[90%] md:max-w-4xl mx-auto pb-24 ">
         <PageTitle title="Contact" />
 

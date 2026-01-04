@@ -22,7 +22,7 @@ const Header = () => {
   }
 
   return (
-    <div className="fixed w-screen bg-light dark:bg-dark dark:text-light z-50">
+    <div className="fixed w-screen bg-light dark:bg-dark dark:text-light z-50 bg-opacity-60 backdrop-blur-md">
       <div className="flex justify-around items-center p-2 md:p-6">
           <Link href={"/"}>
             <Image

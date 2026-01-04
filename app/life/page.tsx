@@ -5,7 +5,7 @@ import PageTitle from "../components/fragments/page-title";
 
 const Page = () => {
   return (
-    <div className="dark:bg-dark dark:text-light">
+    <div className="bg-light dark:bg-dark dark:text-light">
       <div className="w-full h-[80vh] bg-life-hero bg-cover bg-center">
         <div className="absolute bottom-56 md:right-16 lg:right-32 md:bottom-56 space-y-6 text-center text-dark">
           <h1 className="font-bold text-4xl md:text-5xl">
