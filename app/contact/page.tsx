@@ -10,6 +10,7 @@ import { redirect } from "next/navigation";
 
 const page = () => {
   const form = useRef<any>();
+  const disabled = true;
 
   const service_id = process.env.EMAILJS_SERVICE_ID!;
   const template_id = process.env.EMAILJS_TEMPLATE_ID!;
@@ -75,10 +76,12 @@ const page = () => {
                 and confirm all fields are correct
               </p>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex flex-col justify-center items-center">
+              {disabled && <p className="text-red-500 p-2">A large number of requests have been identified, submission disabled</p>}
               <button
+                disabled={disabled}
                 type="submit"
-                className="w-48 text-center px-6 py-2 bg-main text-white rounded-md hover:bg-sub transition-all duration-200 font-bold"
+                className={`w-48 text-center px-6 py-2 ${disabled ? "bg-gray-500 text-white" : "bg-main text-white rounded-md hover:bg-sub transition-all duration-200 font-bold"} `}
               >
                 Send
               </button>
