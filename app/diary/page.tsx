@@ -20,11 +20,13 @@ export const metadata: Metadata = {
   description: "Sharing experience and new findings through my diary entries.",
 };
 
-interface PageProps {
-  searchParams: Promise<{ page: string }>
-}
-
-export default async function Page({ searchParams }: PageProps) {
+export default async function page({
+  params,
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+  params: Promise<{ slug: string }>;
+}){
   try {
     const params = await searchParams;
     const page = parseInt(params.page || "1", 10);
