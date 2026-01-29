@@ -48,18 +48,14 @@ const AboutMe = () => {
         <div ref={contentRef} className="p-8 md:w-1/2 mx-auto space-y-6">
           <div className="hidden md:block">
             <h1 className="text-3xl">Kiyohiro Kambayashi</h1>
-            <p>28 years old / Japanese / Web developer</p>
+            <p>29 years old / Japanese / Full Stack Developer</p>
           </div>
 
           <p>Hi, all!</p>
           <p>Glad of you to see this website!</p>
-          <p>
-            I&apos;m studying Bachelor of Information and Communications Techonology in
-            WSU!
-          </p>
 
           <p>
-            It takes time to get new skill but I believe choice and consistency will deliver
+            It always takes time to get new skill but I believe choice and consistency will deliver
             the great consequences.
           </p>
 
