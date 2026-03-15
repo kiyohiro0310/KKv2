@@ -36,7 +36,7 @@ const SakuraRain = () => {
               top: "110%", 
               left: [`${startLeft}%`, `${startLeft + 5}%`, `${startLeft - 5}%`],
               opacity: [0, 1, 1, 0],
-              rotate: 360 
+              rotate: Math.random() * 360
             }}
             transition={{
               duration: duration,
